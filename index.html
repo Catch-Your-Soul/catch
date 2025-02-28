@@ -3,109 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于我</title>
+    <title>公共网站主页</title>
     <style>
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            color: #333;
         }
         header {
-            background-color: #ff6f61;
+            background-color: #4CAF50;
             color: white;
-            padding: 20px;
+            padding: 20px 0;
             text-align: center;
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        h1 {
-            color: #ff6f61;
+        nav {
+            background-color: #333;
+            padding: 10px 0;
             text-align: center;
         }
-        h2 {
-            color: #ff6f61;
-        }
-        .profile-img {
-            max-width: 150px;
-            border-radius: 50%;
-            display: block;
-            margin: 0 auto 20px;
-            border: 5px solid #ff6f61;
-        }
-        .social-links {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .social-links a {
-            margin: 0 10px;
+        nav a {
+            color: white;
             text-decoration: none;
-            color: #ff6f61;
+            margin: 0 15px;
             font-weight: bold;
         }
-        .social-links a:hover {
+        nav a:hover {
             text-decoration: underline;
         }
-        .fun-fact {
-            background-color: #fff3e0;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 20px;
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
         }
-        .fun-fact h3 {
-            color: #ff6f61;
-            margin-top: 0;
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .services, .about, .contact {
+            margin: 40px 0;
+        }
+        .services h2, .about h2, .contact h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .service-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .card h3 {
+            color: #4CAF50;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>嘿，我是[你的名字]！</h1>
+        <h1>欢迎来到[网站名称]</h1>
+        <p>您的信任，我们的责任</p>
     </header>
 
-    <div class="container">
-        <h2>关于我</h2>
-        <p>嗨！我是梁超翔，一个混吃等死的混子。我平时喜欢打游戏，偶尔也会写写代码、拍拍照。</p>
-        <p>我的生活格言是：“能躺着绝不坐着，能坐着绝不站着！” </p>
+    <nav>
+        <a href="#home">首页</a>
+        <a href="#services">服务</a>
+        <a href="#about">关于我们</a>
+        <a href="#contact">联系我们</a>
+    </nav>
 
-        <h2>我的技能</h2>
-        <p>虽然我不算特别厉害，但我会这些：</p>
-        <ul>
-            <li>技能1，用Python写bug</li>
-            <li>技能2，用Ps修出奇怪的照片</li>
-            <li>技能3，用互联网找一些奇奇怪怪的小工具</li>
-        </ul>
-
-        <h2>我的日常</h2>
-        <p>我的一天通常是这样的：</p>
-        <ol>
-            <li>早上：吃早饭</li>
-            <li>中午：吃午饭</li>
-            <li>晚上：吃晚饭</li>
-        </ol>
-
-        <h2>找到我</h2>
-        <p>如果你想和我聊聊，可以通过以下方式找到我：</p>
-        <ul>
-            <li>邮箱：1378072741@qq.com</li>
-            <li>手机号：13298478160</li>
-            <li>社交媒体：👇</li>
-        </ul>
-
-        <div class="social-links">
-            <a href="https://space.bilibili.com/651716307?spm_id_from=333.1007.0.0" target="_blank">B站</a>
-            <a href="https://github.com/dashboard" target="_blank">GitHub</a>
-        </div>
+    <div class="hero" id="home">
+        <h1>为您提供优质服务</h1>
+        <p>我们致力于为您提供最好的解决方案，满足您的需求。</p>
     </div>
+
+    <div class="container">
+        <section class="services" id="services">
+            <h2>我们的服务</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>服务一</h3>
+                    <p>提供专业的[服务一描述]，帮助您实现目标。</p>
+                </div>
+                <div class="card">
+                    <h3>服务二</h3>
+                    <p>通过[服务二描述]，为您创造更多价值。</p>
+                </div>
+                <div class="card">
+                    <h3>服务三</h3>
+                    <p>我们的[服务三描述]将为您带来卓越体验。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <h2>关于我们</h2>
+            <p>我们是[公司/组织名称]，成立于[成立年份]，专注于[领域或行业]。我们的团队由一群充满激情和创造力的专业人士组成，致力于为客户提供最优质的服务。</p>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>联系我们</h2>
+            <p>如果您有任何问题或需要帮助，请随时联系我们：</p>
+            <ul>
+                <li>电话: [联系电话]</li>
+                <li>邮箱: [联系邮箱]</li>
+                <li>地址: [公司地址]</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 [网站名称]. 保留所有权利. | <a href="#">隐私政策</a> | <a href="#">使用条款</a></p>
+    </footer>
 
 </body>
 </html>
